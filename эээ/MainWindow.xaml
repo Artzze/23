@@ -1,0 +1,36 @@
+﻿<Window x:Class="эээ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:эээ"
+        mc:Ignorable="d"
+        Title="Практическая 23" Height="300" Width="400" ResizeMode="NoResize" Icon="/46db5ab0b1643199f65eef34933fba16c022b0d5.jpg">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Выход" Click="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Фигура">
+                <MenuItem Header="Рисовать" Click="Draw"/>
+                <MenuItem Header="Стереть" Click="Clear"/>
+            </MenuItem>
+            <MenuItem Header="Сведения">
+                <MenuItem Header="О программе" Click="About"/>
+            </MenuItem>
+            <StackPanel>
+                <TextBlock Text="Выбор цвета"/>
+                <ComboBox Name="Colours">
+                    <Border BorderBrush="Aqua" BorderThickness="15,15,50,5" MouseDown="Aqua"/>
+                    <Border BorderBrush="Pink" BorderThickness="15,15,50,5" MouseDown="Pink"/>
+                    <Border BorderBrush="Green" BorderThickness="15,15,50,5" MouseDown="Green"/>
+                    <Border BorderBrush="Red" BorderThickness="15,15,50,5" MouseDown="Red"/>
+                    <Border BorderBrush="Yellow" BorderThickness="15,15,50,5" MouseDown="Yellow"/>
+                </ComboBox>
+            </StackPanel>
+        </Menu>
+        <Canvas Name="canvas">
+            
+        </Canvas>
+    </Grid>
+</Window>
